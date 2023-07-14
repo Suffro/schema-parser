@@ -1,6 +1,6 @@
 # Schema Parser
 
-**schema-parser** is a powerful utility for parsing JSON and object schemas in Node.js.
+Schema Parser is a powerful utility for parsing JSON and object schemas in Node.js.
 
 ## Features
 
