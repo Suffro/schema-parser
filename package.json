@@ -1,6 +1,5 @@
 {
 	"name": "@Suffro/schema-parser",
-	"private": "false",
 	"version": "0.0.1",
 	"description": "",
 	"sideEffects": false,
