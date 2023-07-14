@@ -19,11 +19,19 @@ npm install @suffro/schema-parser
 
 ## Usage
 
-Here's a simple example on how you can use `schema-parser`:
+###Here's a simple example on how you can use `schema-parser`:
 
+First import it like this:
 ```javascript
 import { schemaFromObject, schemaFromJSON } from 'schema-parser';
+```
+or
+```javascript
+const  { schemaFromObject, schemaFromJSON } =  require("schema-parser");
+```
 
+Then use it in your code:
+```javascript
 // For Objects
 let obj = {
     name: 'John Doe',
