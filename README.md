@@ -1,97 +1,65 @@
 # Schema-Parser
 
-The JSON-Schema-Parser is a powerful utility for generating a simplified schema from a JSON object. It traverses through your JSON data, regardless of the level of nesting, and returns a schema that provides key information about the data types present in your JSON.
+Schema-Parser is a powerful utility for parsing JSON and object schemas in Node.js.
+
+## Features
+
+- Parse any object to get its schema.
+- Parse any JSON string to get its schema.
+- Supports complex nested structures.
+- Identifies array, object, and primitive types.
 
 ## Installation
 
-Use npm to install JSON-Schema-Parser:
+To install the package, use the following npm command:
 
-```
-npm install json-schema-parser
-```
+\```sh
+npm install schema-parser
+\```
 
 ## Usage
 
-First, import the `schemaFromObject` function from the package:
+Here's a simple example on how you can use `schema-parser`:
 
-```
-import { schemaFromObject } from 'json-schema-parser';
-```
+\```javascript
+import { schemaFromObject, schemaFromJSON } from 'schema-parser';
 
-Here is a basic usage example:
-
-```
-const data = {
-  name: "John",
-  age: 30,
-  city: "New York",
-  hobbies: ["Skiing", "Reading"]
-};
-
-const schema = schemaFromObject(data);
-
-console.log(schema);
-```
-
-The above code will output the following schema:
-
-```
-{
-  name: 'string',
-  age: 'number',
-  city: 'string',
-  hobbies: 'array',
-  'hobbies[0]': 'string'
-}
-```
-
-The JSON-Schema-Parser can handle complex nested objects and arrays as well. For example:
-
-```
-const complexData = {
-  person: {
-    name: "John",
+// For Objects
+let obj = {
+    name: 'John Doe',
     age: 30,
-    job: {
-      title: "Engineer",
-      location: "California"
-    },
-    hobbies: ["Skiing", "Reading"]
-  }
+    hobbies: ['Reading', 'Coding'],
+    address: {
+        city: 'San Francisco',
+        country: 'USA'
+    }
 };
 
-const complexSchema = schemaFromObject(complexData);
+let schema = schemaFromObject(obj);
+console.log(schema);
 
-console.log(complexSchema);
-```
+// For JSON
+let jsonString = '{"name":"John Doe","age":30,"hobbies":["Reading","Coding"],"address":{"city":"San Francisco","country":"USA"}}';
+let schema = schemaFromJSON(jsonString);
+console.log(schema);
+\```
 
-The output schema would look like:
+In the output of both `console.log` calls, you'll see the schema of the provided object or JSON string.
 
-```
-{
-  "person.name": "string",
-  "person.age": "number",
-  "person.job.title": "string",
-  "person.job.location": "string",
-  "person.hobbies": "array",
-  "person.hobbies[0]": "string"
-}
-```
+## API
 
-## Error Handling
+**schemaFromObject(obj: any): Schema**
 
-The `schemaFromObject` function performs some basic error handling. It will throw an error if it is called with a non-object or null value:
+Parses an object and returns its schema.
 
-```
-schemaFromObject(null); // throws Error: Input to schemaFromObject must be a non-null object.
+**schemaFromJSON(jsonString: string): Schema**
 
-schemaFromObject(42); // throws Error: Input to schemaFromObject must be a non-null object.
-```
+Parses a JSON string and returns its schema.
 
-## Contribution
+## Contribute
 
-Contributions are always welcome! Please read the contribution guidelines first.
+Your contributions are always welcome! Please create a PR to propose changes.
 
 ## License
 
-The JSON-Schema-Parser is [MIT licensed](./LICENSE).
+[MIT](http://opensource.org/licenses/MIT)
