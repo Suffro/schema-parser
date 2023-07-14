@@ -23,11 +23,11 @@ npm install @suffro/schema-parser
 
 First import it like this:
 ```javascript
-import { schemaFromObject, schemaFromJSON } from 'schema-parser';
+import { schemaFromObject, schemaFromJSON } from '@suffro/schema-parser';
 ```
 or
 ```javascript
-const  { schemaFromObject, schemaFromJSON } =  require("schema-parser");
+const  { schemaFromObject, schemaFromJSON } =  require("@suffro/schema-parser");
 ```
 
 Then use it in your code:
