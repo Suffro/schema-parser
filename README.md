@@ -19,7 +19,7 @@ npm install @suffro/schema-parser
 
 ## Usage
 
-###Here's a simple example on how you can use `schema-parser`:
+### Here's a simple example on how you can use `schema-parser`:
 
 First import it like this:
 ```javascript
