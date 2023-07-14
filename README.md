@@ -13,15 +13,15 @@ Schema-Parser is a powerful utility for parsing JSON and object schemas in Node.
 
 To install the package, use the following npm command:
 
-\```sh
+```sh
 npm install schema-parser
-\```
+```
 
 ## Usage
 
 Here's a simple example on how you can use `schema-parser`:
 
-\```javascript
+```javascript
 import { schemaFromObject, schemaFromJSON } from 'schema-parser';
 
 // For Objects
@@ -42,7 +42,7 @@ console.log(schema);
 let jsonString = '{"name":"John Doe","age":30,"hobbies":["Reading","Coding"],"address":{"city":"San Francisco","country":"USA"}}';
 let schema = schemaFromJSON(jsonString);
 console.log(schema);
-\```
+```
 
 In the output of both `console.log` calls, you'll see the schema of the provided object or JSON string.
 
