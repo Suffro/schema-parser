@@ -29,24 +29,28 @@ let obj = {
     name: 'John Doe',
     age: 30,
     hobbies: ['Reading', 'Coding'],
-    address: {
+    addresses: [{
         city: 'San Francisco',
         country: 'USA'
-    }
+    },
+    {
+        city: 'Los Angeles',
+        country: 'USA'
+    }]
 };
 
 let schema = schemaFromObject(obj);
 console.log(schema);
 
 // For JSON
-let jsonString = '{"name":"John Doe","age":30,"hobbies":["Reading","Coding"],"address":{"city":"San Francisco","country":"USA"}}';
+let jsonString = '{"name":"John Doe","age":30,"hobbies":["Reading","Coding"],"addresses":[{"city":"San Francisco","country":"USA"},{"city":"Los Angeles","country":"USA"}]}';
 let schema = schemaFromJSON(jsonString);
 console.log(schema);
 ```
 
 In the output of both `console.log` calls, you'll see the schema of the provided object or JSON string.
 
-**NOTE:** Schema parser is capable of getting the schema of objects or json with nested arrays of objects, but it assumes that the objects in the array all have the same schema.
+**NOTE:** Schema parser is capable of getting the schema of objects or json with nested arrays of objects like the value of 'addresses' in the example above, but it assumes that the objects in the array all have the same schema.
 
 ## API
 
