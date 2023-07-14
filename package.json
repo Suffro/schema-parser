@@ -1,6 +1,6 @@
 {
 	"name": "@Suffro/schema-parser",
-	"private": "true",
+	"private": "false",
 	"version": "0.0.1",
 	"description": "",
 	"sideEffects": false,
@@ -31,15 +31,12 @@
 		"format:fix": "prettier --write . --config ./prettier.config.json",
 		"build": "cross-env NODE_ENV=build rimraf ./dist/** && rollup --config"
 	},
-	"repository": {
-		"type": "",
-		"url": ""
-	},
+	"repository": "https://github.com/Suffro/schema-parser",
 	"keywords": [],
-	"author": "name <example@example.com> (https://example.com)",
+	"author": "Lorenzo Suffritti, dev@lorenzosuffritti.com (https://github.com/Suffro)",
 	"license": "MIT",
 	"bugs": {
-		"url": ""
+		"url": "https://github.com/Suffro/schema-parser/issues"
 	},
 	"homepage": "",
 	"devDependencies": {
@@ -71,5 +68,8 @@
 	"dependencies": {},
 	"directories": {
 		"test": "tests"
-	}
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	  }
 }
