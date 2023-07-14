@@ -1,4 +1,4 @@
-# [Schema Parser]("https://www.npmjs.com/package/@lorenzo.suffritti/schema-parser")
+# [Schema Parser](https://www.npmjs.com/package/@lorenzo.suffritti/schema-parser)
 
 Schema Parser is a powerful utility for parsing JSON and object schemas in Node.js.
 
