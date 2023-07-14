@@ -1,4 +1,4 @@
-# [Schema Parser](https://www.npmjs.com/package/@lorenzo.suffritti/schema-parser)
+# [Schema Parser](https://www.npmjs.com/package/@suffro/schema-parser)
 
 Schema Parser is a powerful utility for parsing JSON and object schemas in Node.js.
 
@@ -14,7 +14,7 @@ Schema Parser is a powerful utility for parsing JSON and object schemas in Node.
 To install the package, use the following npm command:
 
 ```sh
-npm install @lorenzo.suffritti/schema-parser
+npm install @suffro/schema-parser
 ```
 
 ## Usage
