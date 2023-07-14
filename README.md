@@ -46,6 +46,8 @@ console.log(schema);
 
 In the output of both `console.log` calls, you'll see the schema of the provided object or JSON string.
 
+**NOTE:** Schema parser is capable of getting the schema of objects or json with nested arrays of objects, but it assumes that the objects in the array all have the same schema.
+
 ## API
 
 **schemaFromObject(obj: any): Schema**
