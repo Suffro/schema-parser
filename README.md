@@ -14,7 +14,7 @@
 To install the package, use the following npm command:
 
 ```sh
-npm install schema-parser
+npm install @suffro/schema-parser
 ```
 
 ## Usage
